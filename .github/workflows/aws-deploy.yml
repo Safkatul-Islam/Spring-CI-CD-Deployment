@@ -33,7 +33,7 @@ jobs:
         with:
           context: .
           push: 'true'
-          tags: ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:v2
+          tags: ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
 
       - name: Pull the Image to AWS Instance
         uses: appleboy/ssh-action@master
@@ -44,8 +44,8 @@ jobs:
           script: |
             docker stop ci-cd-app
             docker rm ci-cd-app
-            docker pull ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:v2
-            docker run -d --name ci-cd-app -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:v2
+            docker pull ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
+            docker run -d --name ci-cd-app -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
 
 
 
