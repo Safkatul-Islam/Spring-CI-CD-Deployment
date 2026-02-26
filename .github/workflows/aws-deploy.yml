@@ -38,7 +38,7 @@ jobs:
       - name: Pull the Image to AWS Instance
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrect.EC2_HOST }}
+          host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
