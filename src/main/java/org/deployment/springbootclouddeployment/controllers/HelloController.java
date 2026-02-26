@@ -17,4 +17,9 @@ public class HelloController {
     public String newMethod() {
         return "This is a new method";
     }
+
+    @GetMapping("/cloud")
+    public String fromCloud() {
+        return "Hello from AWS EC2";
+    }
 }
