@@ -20,6 +20,6 @@ public class HelloController {
 
     @GetMapping("/cloud")
     public String fromCloud() {
-        return "Hello from AWS EC2";
+        return "Hello from AWS EC2!";
     }
 }
