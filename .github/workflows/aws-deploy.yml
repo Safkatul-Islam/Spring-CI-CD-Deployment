@@ -46,6 +46,3 @@ jobs:
             docker rm ci-cd-app
             docker pull ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
             docker run -d --name ci-cd-app -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/ci-cd-deployment:latest
-
-
-
