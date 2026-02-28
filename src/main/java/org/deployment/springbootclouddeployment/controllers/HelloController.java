@@ -22,9 +22,4 @@ public class HelloController {
     public String fromCloud() {
         return "Hello from AWS EC2!";
     }
-
-    @GetMapping("/cloud")
-    public String commit() {
-        return "Testing endpoint";
-    }
 }
